@@ -3,14 +3,44 @@
 //Debug the type of data provided
 //Return the types concatenated in a single variable
 
+function moreAboutHome(address,distanceFromTown,hasNeighbours)
+{
+    let createManager={Address : address , distance : distanceFromTown, Neighbours : hasNeighbours}
+    return typeof createManager.Address +typeof createManager.distance + typeof createManager.Neighbours;
+}
 //Progression 2:
 //Check if the data given is of the right type
 //parents = String, noOfSiblings = Number, isNuclearFamily = Boolean
+
+
+function moreAboutKaren(parents,noOfSiblings,isNuclearFamily)
+{
+  let moreAboutKaren={pa : parents , no : noOfSiblings,nuclear : isNuclearFamily}
+ // alert(typeof moreAboutKaren.nuclear)
+  if ( typeof moreAboutKaren.pa === typeof "" && typeof moreAboutKaren.no === 'number' && typeof moreAboutKaren.nuclear === 'boolean')
+  return true
+  else
+  return false
+}
+
+
 
 //Progression 3:
 //Lily is suspicious about Karen's new friend
 //Karen tells her friend's age and even writes it down
 //Check which one those is not a number (NaN) and return that value
+function doesFriendExist(agetext,agenumber)
+{
+
+    if (agetext === 'NaN'  ||  agenumber === 'NaN')
+    {
+    return  agetext
+    }
+    if (isNaN(agetext) || isNaN(agenumber) )
+    return NaN
+    
+    
+}
 
 //Progression 4:
 //Lily gave Karen x sweets
@@ -19,10 +49,37 @@
 //Her friend divided the remaining sweets into 2 parts for each
 //How many sweets did her friend get to eat?
 
+function sweetTooth(totalno,consumed,consumedinmeter, meterstotravel)
+{
+if (isNaN(totalno) ||isNaN(consumed) || isNaN(consumedinmeter) || isNaN(meterstotravel))
+return "No sweets for Karen's friend"
+if (totalno === 0 && consumedinmeter === 0 &&  consumed === 0 && meterstotravel === 0)
+return totalno;
+if (consumedinmeter < meterstotravel)
+return 0
+}
+
 //Progression 5:
 //As Lily moves closer, it gets colder. She checks the temperature on her mobile
 //It only shows in fahrenheit. Convert the data to celsius and return it.
-
+function convertToCelsius(data)
+{
+    if (typeof data === 'undefined' || typeof data === 'string' || typeof data === 'object')
+    return 'Technical Error!'
+    else
+    return (5/9*(data-32))
+}
+function aDifficultChoice(choice)
+{
+    if (choice === 1)
+    return 'Take her daughter to a doctor'
+    else if (choice === -1 )
+    return  'Break down and give up all hope'
+    else if (typeof choice === 'undefined')
+    return "Wasn't able to decide"
+    else
+    return 'Refused to do anything for Karen'
+}
 //Progression 6:
 //Lily can now do multiple things to deal with this
 //1. Take her daughter to a doctor
