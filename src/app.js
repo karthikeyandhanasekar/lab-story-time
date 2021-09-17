@@ -69,17 +69,7 @@ function convertToCelsius(data)
     else
     return (5/9*(data-32))
 }
-function aDifficultChoice(choice)
-{
-    if (choice === 1)
-    return 'Take her daughter to a doctor'
-    else if (choice === -1 )
-    return  'Break down and give up all hope'
-    else if (typeof choice === 'undefined')
-    return "Wasn't able to decide"
-    else
-    return 'Refused to do anything for Karen'
-}
+
 //Progression 6:
 //Lily can now do multiple things to deal with this
 //1. Take her daughter to a doctor
@@ -87,7 +77,30 @@ function aDifficultChoice(choice)
 //3. Counsel her daughter herself
 //4. Lock her daughter in her room
 //Given a value, return which of these above actions Lily would take
+function aDifficultChoice(choice)
+{
+    if (choice === 1)
+    return 'Take her daughter to a doctor'
+    else if(choice ===2)
 
+        return "Talk to her husband about it";
+    
+    else if(choice===3)
+    
+        return "Counsel her daughter herself";
+    
+    else if(choice===4)
+    
+        return "Lock her daughter in her room";
+    
+    else if (choice === -1 )
+    return  'Break down and give up all hope'
+    else if (typeof choice === 'undefined')
+    
+    return "Wasn't able to decide"
+    else
+    return 'Refused to do anything for Karen'
+}
 //Progression 7:
 //Lily realized that she'd hurt her daughter
 //All she wants now is for her to stop crying
@@ -96,3 +109,12 @@ function aDifficultChoice(choice)
 //Take all of Lily's strategies and concatenate them to a single var
 //Seperate the strategies by a single space
 //Return the length of the complete strategy
+
+function consoleKaren(strategies)
+{
+    var singlevar="";
+    for (const i of strategies) {
+        singlevar+=" "+i;
+    }
+    return singlevar.length;
+}
